@@ -76,6 +76,12 @@ void loop()
   Serial.println(myIMU.readTempC(), 4);
   Serial.print(" Degrees F = ");
   Serial.println(myIMU.readTempF(), 4);
+
+  Serial.print("\nBus Errors Reported:\n");
+  Serial.print(" All '1's = ");
+  Serial.println(myIMU.allOnesCounter);
+  Serial.print(" Non-success = ");
+  Serial.println(myIMU.nonSuccessCounter);
   
   delay(1000);
 }

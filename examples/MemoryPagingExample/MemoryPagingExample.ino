@@ -41,8 +41,7 @@ Distributed as-is; no warranty is given.
 
 uint16_t errorsAndWarnings = 0;
 
-LSM6DS3Core myIMU( I2C_MODE, 0x6B );
-//LSM6DS3Core myIMU( SPI_MODE, 10 );
+LSM6DS3Core myIMU( I2C_MODE, 0x6A );
 
 void setup()
 {

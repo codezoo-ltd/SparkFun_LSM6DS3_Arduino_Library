@@ -52,8 +52,9 @@ Distributed as-is; no warranty is given.
 #include "Wire.h"
 #include "SPI.h"
 
-LSM6DS3 myIMU( SPI_MODE, 10 );
+LSM6DS3 myIMU( I2C_MODE, 0x6A );
 
+/* Serial baudrate 115200 bps !! */
 void setup( void ) {
   //Over-ride default settings if desired
   myIMU.settings.gyroEnabled = 1;  //Can be 0 or 1
@@ -86,7 +87,7 @@ void setup( void ) {
   //  6 (Continous mode)
   
 
-  Serial.begin(57600);  // start serial for output
+  Serial.begin(115200);  // start serial for output
   delay(1000); //relax...
   Serial.println("Processor came out of reset.\n");
   
